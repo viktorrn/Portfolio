@@ -3,7 +3,7 @@
 FROM golang:1.22 AS build-stage
 
 # set the working directory in the container
-WORKDIR /app
+WORKDIR /
 
 # download go modules
 COPY go.mod go.sum ./
