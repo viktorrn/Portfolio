@@ -21,3 +21,5 @@
 go.work
 
 view/**/*_templ.go
+node_modules/
+
