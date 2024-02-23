@@ -9,7 +9,7 @@ import (
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
-	component := index.Show(r.URL.Path)
+	component := index.ShowIndex()
 	err := component.Render(ctx, w)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
