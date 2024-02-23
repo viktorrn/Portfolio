@@ -2,18 +2,14 @@ package handler
 
 import (
 	"net/http"
-	"regexp"
 )
-
-var validPath = regexp.MustCompile("^/$")
 
 func HandleRouter(fn func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		// Mange allowed URL:s
 
-		//validate the path
-		m := validPath.FindStringSubmatch(r.URL.Path)
-
-		if m == nil {
+		m := true
+		if m == false {
 			http.NotFound(w, r)
 			return
 		}

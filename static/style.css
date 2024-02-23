@@ -1,0 +1,41 @@
+/* FILEPATH: /D:/Projects/Portfolio/static/test.css */
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Apply font and basic styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background-color: black;
+}
+
+/* Add purple gradient overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(128, 0, 128, 0.5), rgba(128, 0, 128, 0.2));
+  pointer-events: none;
+}
+
+
+/* Add padding to the body */
+h1 {
+  font-size: 6rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 24rem;
+  text-align: center;
+}
