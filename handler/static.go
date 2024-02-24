@@ -19,5 +19,10 @@ func StaticHandler(w http.ResponseWriter, r *http.Request) {
 
 	}
 
+	if strings.HasPrefix(r.URL.Path, "svg/") {
+		w.Header().Set("Content-Type", "image/svg+xml")
+
+	}
+
 	http.ServeFile(w, r, "static/"+r.URL.Path)
 }

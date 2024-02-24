@@ -1,5 +1,7 @@
 package layout
 
+
+
 templ Base(){
     <!DOCTYPE html>
     <html lang="en">
@@ -13,7 +15,26 @@ templ Base(){
         </head>
 
         <body>
+            <nav>
+                <a href="/about">About Me</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
+            </nav>
             { children... }
+            <footer>
+                <div>
+                    yo
+                </div>
+                
+                <div>
+                    <p>© 2024</p>
+                </div>
+
+                <div class="socials">
+                    <a href=""> <img class="svg-icon" src="/static/github-icon.svg"/> </a>
+                    <a href=""><img class="svg-icon" src="/static/linkedin-icon.svg"/> </a>
+                </div>
+            </footer>
         </body>
     </html>
 }
