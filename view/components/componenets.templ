@@ -1,0 +1,37 @@
+package components
+
+templ Banner(){
+    <section class="banner">
+      <h2> Technologies I've worked with </h2>
+      <div>
+        <img src="static/svg/go.svg" alt="go"/>
+        <img src="static/svg/python.svg" alt="python"/>
+        <img src="static/svg/c.svg" alt="c"/>
+        <img src="static/svg/c-sharp.svg" alt="c-sharp"/>
+        <img src="static/svg/ts.svg" alt="typescript"/>
+        <img src="static/svg/java.svg" alt="java"/>
+        <img src="static/svg/npm.svg" alt="npm"/>
+        <img src="static/svg/docker.svg" alt="docker"/>
+      </div>
+      <div>
+        <img src="static/svg/html.svg" alt="html"/>
+        <img src="static/svg/css.svg" alt="css"/>
+        <img src="static/svg/js.svg" alt="javascript"/>
+        <img src="static/svg/eslint.svg" alt="eslint"/>
+        <img src="static/svg/react.svg" alt="react"/>
+        <img src="static/svg/next.svg" alt="next"/>
+        <img src="static/svg/prisma.svg" alt="prisma"/>
+        <img src="static/svg/toml.svg" alt="toml"/>
+        <img src="static/svg/json.svg" alt="json"/>
+      </div>
+    </section>
+}
+
+templ WorkCard(timeFrame string, company string, role string, description string){
+    <div class="work-card">
+        <div class="work-card__time-frame">{timeFrame}</div>
+        <div class="work-card__company">{company}</div>
+        <div class="work-card__role">{role}</div>
+        <div class="work-card__description">{description}</div>
+    </div>
+}

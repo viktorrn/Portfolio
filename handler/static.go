@@ -21,6 +21,7 @@ func StaticHandler(w http.ResponseWriter, r *http.Request) {
 
 	if strings.HasPrefix(r.URL.Path, "svg/") {
 		w.Header().Set("Content-Type", "image/svg+xml")
+		w.Header().Set("Cache-Control", "max-age=2592000")
 
 	}
 

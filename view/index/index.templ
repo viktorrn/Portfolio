@@ -1,9 +1,11 @@
 package index
 
 import "portfolio/view/layout"
+import "portfolio/view/components"
 
 templ ShowIndex(){
    @layout.Base(){
+  
     <section class="hero">
       <h1 class="name"> Viktor Rönnbacka Nybäck </h1>
       <div class="description">
@@ -12,20 +14,22 @@ templ ShowIndex(){
         <p>Who loves to learn new things </p>
         <p>and build solutions to digital problems   </p>
       </div>
-      <a href="/contact" class="cta"> Get in Touch </a>
+      <a href="/contact" class="cta"> <h2> Get in Touch</h2> </a>
     </section>
     
-    <section class="banner">
-      <img class="svg-icon-large" src="static/go-icon.svg" alt="go"/>
-      <img class="svg-icon-large" src="static/python-icon.svg" alt="python"/>
-      <img class="svg-icon-large" src="static/js-icon.svg" alt="javascript"/>
-      <img class="svg-icon-large" src="static/react-icon.svg" alt="react"/>
-    </section>
+    @components.Banner()
     
-    <section>
+    <section class="about">
       <h2> About me </h2>
-      <p> I am a student at KTH Royal Institute of Technology in Stockholm, Sweden. I am currently studying Machine Learning and have a passion for fullstack development. I have a strong interest in learning new things and building solutions to digital problems. </p>
+      <p class="text"> I am a student at KTH Royal Institute of Technology in Stockholm, Sweden. I am currently studying Machine Learning and have a passion for fullstack development. I build everything from Websites to games and every now and then I dabble in some design work. </p>
     </section>
     
+    <section class="work">
+      <h2> Experience </h2>
+      @components.WorkCard("2023","Mindformation","Fullstack Developer","I worked as a fullstack developer at Mindformation. I worked with a team to develop a web application for a client. I was responsible for the frontend and backend of the application. I used SvelteKit, AWS and Node.js to build the application.")
+
+
+    </section>
+
    }
 }

@@ -16,9 +16,47 @@ body {
   padding: 0;
   color: var(--text-color);
   width: 100%;
-  height: 100%;
+  height: 1000%;
   background-color: var(--background-color);
+  overflow-y: scroll;
   
+}
+
+.text{
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 960px){
+  h2{
+    font-size: 1.5rem !important;
+  }
+
+  .text{
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  
+}
+
+@media screen and (max-width: 425px){
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  .text{
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+ display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .background-gradient {
@@ -31,7 +69,7 @@ body {
   filter: contrast(200%) brightness(1600%);
   background: 
     linear-gradient(0deg, var(--primary-color) 0%, rgba(4,4,4,0) 100%),
-    url('/static/noise.svg');
+    url('/static/svg/noise.svg');
 
   background-repeat: repeat-x;
  
@@ -55,15 +93,23 @@ Purple to black fade
 
 nav {
   position: fixed;
-  top: 10rem;
-  right: 6rem;
-  
+  right:0;
+  top: 8rem;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 2rem;
+  backdrop-filter: blur(0.5rem);
+  z-index: 100;
+
+}
+
+nav > div{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-right: 6rem;
+  padding: 2rem 0;
   
-  font-weight: 500;
-  font-size: 2rem;
 }
 
 nav a {
@@ -109,17 +155,20 @@ section {
 
 @media screen and (max-width: 960px){
   nav{
+    top:0;
     position: fixed;
-    top: 1rem;
-    left: 2rem;
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  
+  nav > div{
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.3rem;
+    align-items: center;
     width: calc(100% - 4rem);
-  }
+    margin: 0 2rem;
+    padding: 0;
 
-  nav::after{
-    filter: blur(0.5rem);
   }
 
   section{
@@ -142,8 +191,11 @@ section {
 
 @media screen and (max-width: 425px){
   nav{
-    left: 1rem;
     font-size: 1rem;
+  }
+  
+  nav > div{
+    left: 1rem;
     width: calc(100% - 2rem);
   }
 
@@ -152,7 +204,7 @@ section {
   }
   
   section{
-    margin: 4rem 1rem;
+    margin: 8rem 1rem;
     width: calc(100% - 2rem);
   }
 
@@ -170,68 +222,124 @@ section {
 
 .cta{
   font-weight: 700;
-  font-size: 2rem;
   margin: 2rem 0rem;
 }
 
-@media screen and (max-width: 960px){
-  .cta{
-    font-size: 1.4rem;
-  }  
+
+.banner{
+  margin: 16rem 0;
+  width: 100%;
+  padding: 1rem 0 3rem 0;
+  backdrop-filter: blur(1rem);
 }
 
-.banner {
+.banner > h2{
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
+  text-align: center;
+
+}
+
+.banner > div{
+  width: calc(100% - 12rem);
+  margin: 0 6rem;
+
+  overflow-x: clip;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin: 8rem 6rem;
-  width: calc(100% - 12rem);
+  justify-content: space-evenly;
+}
+
+.banner > div > img{
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 960px){
+  .banner{
+    margin: 4rem 0;
+  }
+  
+  .banner > div{
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+  }  
+}
+
+@media screen and (max-width: 425px){
+  .banner{
+    margin: 2rem 0;
+  }
+  
+  .banner > div{
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+  }  
+
+  .banner > div > img{
+    width: 2rem;
+    height: 2rem;
+  }
+  
+}
+
+
+.about{
+  max-width: 640px;
+}
+
+@media screen and (max-width: 425px){
+  .about{
+    max-width: 100%;
+  }
+  
 }
 
 footer {
   position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(0.5rem);
+}
+
+footer > div{
   width: calc(100% - 12rem);
   margin: 0 6rem;
-  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 
+
 @media screen and (max-width: 425px){
-  footer{
+  footer > div{
     width: calc(100% - 2rem);
     margin: 0 1rem;
   }
+  
+
 }
 
-footer > .socials{
+footer > div > .socials{
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-footer > .socials > a{
+footer > div > .socials > a{
   margin:  1rem;
 }
 
 
-.light {
-  font-weight: 500;
-}
-
 .svg-icon {
   width: 2rem;
   height: 2rem;
-  object-fit: cover;
-  fill: white;
-}
-
-.svg-icon-large {
-  width: 3rem;
-  height: 3rem;
   object-fit: cover;
   fill: white;
 }
@@ -268,6 +376,9 @@ footer > .socials > a{
   }
   
 }
+
+
+
 
 
 
