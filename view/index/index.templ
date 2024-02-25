@@ -4,7 +4,7 @@ import "portfolio/view/layout"
 
 templ ShowIndex(){
    @layout.Base(){
-    <div class="hero">
+    <section class="hero">
       <h1 class="name"> Viktor Rönnbacka Nybäck </h1>
       <div class="description">
         <p> KTH ML Student & </p>
@@ -12,7 +12,20 @@ templ ShowIndex(){
         <p>Who loves to learn new things </p>
         <p>and build solutions to digital problems   </p>
       </div>
-      <a href="/contact" class="btn"> Reach Out </a>
-    </div>
+      <a href="/contact" class="cta"> Get in Touch </a>
+    </section>
+    
+    <section class="banner">
+      <img class="svg-icon-large" src="static/go-icon.svg" alt="go"/>
+      <img class="svg-icon-large" src="static/python-icon.svg" alt="python"/>
+      <img class="svg-icon-large" src="static/js-icon.svg" alt="javascript"/>
+      <img class="svg-icon-large" src="static/react-icon.svg" alt="react"/>
+    </section>
+    
+    <section>
+      <h2> About me </h2>
+      <p> I am a student at KTH Royal Institute of Technology in Stockholm, Sweden. I am currently studying Machine Learning and have a passion for fullstack development. I have a strong interest in learning new things and building solutions to digital problems. </p>
+    </section>
+    
    }
 }

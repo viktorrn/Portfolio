@@ -9,6 +9,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", handler.HandleRouter(handler.IndexHandler))
+	http.HandleFunc("/contact", handler.HandleRouter(handler.ContactHandler))
 	http.Handle("POST /$", handler.HandleRouter(handler.PostHandler))
 	http.Handle("/static/", http.StripPrefix("/static/", handler.HandleRouter(handler.StaticHandler)))
 

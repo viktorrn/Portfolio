@@ -1,0 +1,25 @@
+package contact;
+
+import "portfolio/view/layout"
+
+const Email = "viktorronnbackanyback@gmail.com"
+
+templ ShowContact(){
+    @layout.Base(){
+    <section class="hero">
+      <h1 > Get in Touch </h1>
+      <div class="description">
+        <p> I'm always open to new </p>
+        <p> opportunities and collaborations. </p>
+        <p style="margin-top: 1rem;">Want to talk? </p> 
+        <p class="light">(+46) 070-100 70 59</p>
+        
+        <p style="margin-top: 1rem;" > Or </p>
+        <p style="margin-top: 1rem; ">Send me an email to </p>
+        <p> <a href="mailto:{ Email }">{ Email }</a></p>
+      </div>
+      
+      <a href="https://github.com/viktorrn" class="cta"> Checkout some of my work </a>
+    </section>
+    }
+}
