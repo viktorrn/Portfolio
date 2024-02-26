@@ -22,6 +22,14 @@ body {
   
 }
 
+h2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+
+}
+
 .text{
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -287,10 +295,42 @@ section {
   
 }
 
-
 .about{
   max-width: 640px;
 }
+
+
+.role{
+  font-weight: 700;
+  margin: 4rem 0 1rem 0;
+}
+
+.work-card{
+  display: flex;
+  flex-direction: row;
+}
+
+.work-card > .info{
+  display: flex;
+  flex-direction: column;  
+}
+
+.work-card > .info > .timeframe{
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.work-card > .info > .company{
+  font-weight: 700;
+  margin: 0;
+}
+
+.work-card > .description{
+  max-width: 800px;
+  margin: 0 0 0 2rem;
+}  
+
+
 
 @media screen and (max-width: 425px){
   .about{

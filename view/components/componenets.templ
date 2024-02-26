@@ -28,10 +28,12 @@ templ Banner(){
 }
 
 templ WorkCard(timeFrame string, company string, role string, description string){
+    <h3 class="role">{role}</h3>
     <div class="work-card">
-        <div class="work-card__time-frame">{timeFrame}</div>
-        <div class="work-card__company">{company}</div>
-        <div class="work-card__role">{role}</div>
-        <div class="work-card__description">{description}</div>
+      <div class="info">
+        <div class="company">{company}</div>
+        <div class="timeframe">{timeFrame}</div>
+      </div>
+      <div class="description text">{description}</div>
     </div>
 }
