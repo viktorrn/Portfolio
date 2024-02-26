@@ -305,10 +305,17 @@ section {
   margin: 4rem 0 1rem 0;
 }
 
+@media screen and (max-width: 425px){
+  .role{
+    margin: 2rem 0 1rem 0;
+  }
+}
+
 .work-card{
   display: flex;
   flex-direction: row;
 }
+
 
 .work-card > .info{
   display: flex;
@@ -330,6 +337,16 @@ section {
   margin: 0 0 0 2rem;
 }  
 
+
+@media screen and (max-width: 425px){
+  .work-card{
+    flex-direction: column;
+  }
+  
+  .work-card > .description{
+    margin: 1rem 0 0 0;
+  }
+}
 
 
 @media screen and (max-width: 425px){
